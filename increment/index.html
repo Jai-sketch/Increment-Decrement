@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Increment and Decrement Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .counter {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="counter">
+        <button onclick="decrement()">-</button>
+        <span id="count">0</span>
+        <button onclick="increment()">+</button>
+    </div>
+
+    <script>
+        let count = 0;
+        
+        function increment() {
+            count++;
+            document.getElementById('count').textContent = count;
+        }
+        
+        function decrement() {
+            if (count > 0) {
+                count--;
+                document.getElementById('count').textContent = count;
+            }
+        }
+    </script>
+</body>
+</html>
